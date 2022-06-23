@@ -16,15 +16,33 @@
     <Filter Include="src">
       <UniqueIdentifier>{315478fc-3e80-4d8b-bd6b-b5fbbdb975a8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Tangram">
+      <UniqueIdentifier>{1b0f71aa-45fe-4456-8ebe-88e7f85e323d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\SandBox\Test.h">
-      <Filter>src</Filter>
+    <ClInclude Include="src\Tangram\Test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tangram\Core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tangram\Application.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tangram.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tangram\EntryPoint.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\SandBox\Test.cpp">
-      <Filter>src</Filter>
+    <ClCompile Include="src\Tangram\Test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tangram\Application.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
