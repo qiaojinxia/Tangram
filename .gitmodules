@@ -1,0 +1,3 @@
+[submodule "Tangram/vendor/spdlog"]
+	path = Tangram/vendor/spdlog
+	url = https://github.com/gabime/spdlog

@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Tangram\Log.h" />
     <ClInclude Include="src\Tangram.h" />
     <ClInclude Include="src\Tangram\Application.h" />
     <ClInclude Include="src\Tangram\Core.h" />
@@ -18,6 +19,7 @@
     <ClInclude Include="src\Tangram\Test.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Tangram\Log.cpp" />
     <ClCompile Include="src\Tangram\Application.cpp" />
     <ClCompile Include="src\Tangram\Test.cpp" />
   </ItemGroup>
@@ -71,6 +73,7 @@
       <PreprocessorDefinitions>TG_PLATFORM_WINDOWS;TG_BUILD_DLL</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)Tangram\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -86,6 +89,7 @@
       <PreprocessorDefinitions>TG_PLATFORM_WINDOWS;TG_BUILD_DLL</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)Tangram\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

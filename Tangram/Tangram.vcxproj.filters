@@ -36,12 +36,18 @@
     <ClInclude Include="src\Tangram\EntryPoint.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\Tangram\Log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Tangram\Test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\Tangram\Application.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tangram\Log.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
