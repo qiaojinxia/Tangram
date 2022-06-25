@@ -80,11 +80,6 @@ project "Sandbox"
 	{
 		"TG_PLATFORM_WINDOWS"
 	}
-
-	postbuildcommands
-	{
-		("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
-	}
 	filter "configurations:Debug"
 		defines "TG_DEBUG"
 		symbols "On"
