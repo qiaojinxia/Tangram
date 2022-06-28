@@ -4,6 +4,9 @@
     <Filter Include="Tangram">
       <UniqueIdentifier>{0FE62030-7BC5-9FCB-84DD-2AA2F03B062D}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tangram\Events">
+      <UniqueIdentifier>{134BB394-FF18-A79A-E8AC-17C1D41983FF}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Tangram.h" />
@@ -16,6 +19,18 @@
     <ClInclude Include="src\Tangram\EntryPoint.h">
       <Filter>Tangram</Filter>
     </ClInclude>
+    <ClInclude Include="src\Tangram\Events\ApplicationEvent.h">
+      <Filter>Tangram\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tangram\Events\Event.h">
+      <Filter>Tangram\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tangram\Events\KeyEvent.h">
+      <Filter>Tangram\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tangram\Events\MouseEvent.h">
+      <Filter>Tangram\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Tangram\Log.h">
       <Filter>Tangram</Filter>
     </ClInclude>
@@ -26,6 +41,9 @@
   <ItemGroup>
     <ClCompile Include="src\Tangram\Application.cpp">
       <Filter>Tangram</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tangram\Events\KeyEvent.cpp">
+      <Filter>Tangram\Events</Filter>
     </ClCompile>
     <ClCompile Include="src\Tangram\Log.cpp">
       <Filter>Tangram</Filter>

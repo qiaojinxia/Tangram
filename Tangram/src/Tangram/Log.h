@@ -2,6 +2,7 @@
 #include "Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
+#include "spdlog/fmt/ostr.h"
 namespace Tangram {
 	class TANGRAM_API Log
 	{
@@ -26,8 +27,8 @@ namespace Tangram {
 
 
 //CLIENT LOG MACROS
-#define TG_CLIENT_ERROR(...)	::Tangram::Log::GetClientLogger()->error(__VA_ARGS__)
-#define TG_CLIENT_WARN(...)		::Tangram::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define TG_CLIENT_INFO(...)		::Tangram::Log::GetClientLogger()->info(__VA_ARGS__)
-#define TG_CLIENT_TRACE(...)	::Tangram::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define TG_CLIENT_FATAL(...)	::Tangram::Log::GetClientLogger()->fatal(__VA_ARGS__)
+#define TG_ERROR(...)	::Tangram::Log::GetClientLogger()->error(__VA_ARGS__)
+#define TG_WARN(...)		::Tangram::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define TG_INFO(...)		::Tangram::Log::GetClientLogger()->info(__VA_ARGS__)
+#define TG_TRACE(...)	::Tangram::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define TG_FATAL(...)	::Tangram::Log::GetClientLogger()->fatal(__VA_ARGS__)
