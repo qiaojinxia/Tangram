@@ -17,6 +17,8 @@ project "Tangram"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "tgpch.h"
+	pchsource "Tangram/src/tgpch.cpp"
 	files
 	{
 		"%{prj.name}/src/**.h",

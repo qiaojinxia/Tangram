@@ -1,7 +1,5 @@
 #pragma once
-#include "Tangram/Core.h"
 #include "Event.h"
-#include <sstream>
 namespace Tangram {
 	class TANGRAM_API KeyEvent:public Event {
 	public:

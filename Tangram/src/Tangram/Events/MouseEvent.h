@@ -1,8 +1,5 @@
 #pragma once
-#include "Tangram/Core.h"
 #include "Event.h"
-#include <sstream>
-
 namespace Tangram {
 	class TANGRAM_API MouseMovedEvent : public Event 
 	{

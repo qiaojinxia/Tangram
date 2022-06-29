@@ -1,7 +1,5 @@
 #pragma once
 #include "Event.h"
-#include <sstream>
-
 namespace Tangram {
 	class TANGRAM_API WindowsResizeEvent :public Event {
 	private:

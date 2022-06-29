@@ -34,22 +34,15 @@
     <ClInclude Include="src\Tangram\Log.h">
       <Filter>Tangram</Filter>
     </ClInclude>
-    <ClInclude Include="src\Tangram\Test.h">
-      <Filter>Tangram</Filter>
-    </ClInclude>
+    <ClInclude Include="src\tgpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Tangram\Application.cpp">
       <Filter>Tangram</Filter>
     </ClCompile>
-    <ClCompile Include="src\Tangram\Events\KeyEvent.cpp">
-      <Filter>Tangram\Events</Filter>
-    </ClCompile>
     <ClCompile Include="src\Tangram\Log.cpp">
       <Filter>Tangram</Filter>
     </ClCompile>
-    <ClCompile Include="src\Tangram\Test.cpp">
-      <Filter>Tangram</Filter>
-    </ClCompile>
+    <ClCompile Include="src\tgpch.cpp" />
   </ItemGroup>
 </Project>

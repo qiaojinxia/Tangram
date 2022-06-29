@@ -1,4 +1,5 @@
 #pragma once
+
 #ifdef TG_PLATFORM_WINDOWS
 	#ifdef TG_BUILD_DLL
 		#define TANGRAM_API __declspec(dllexport)
