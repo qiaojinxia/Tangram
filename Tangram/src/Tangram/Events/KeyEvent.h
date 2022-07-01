@@ -39,6 +39,6 @@ namespace Tangram {
 			ss << "KeyReleasedEvent:" << m_KeyCode ;
 			return ss.str();
 		}
-		EVENT_CLASS_TYPE(KeyReleasedEvent)
+		EVENT_CLASS_TYPE(KeyReleased)
 	};
 }
