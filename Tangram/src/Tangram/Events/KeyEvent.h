@@ -1,7 +1,7 @@
 #pragma once
 #include "Event.h"
 namespace Tangram {
-	class TANGRAM_API KeyEvent:public Event {
+	class TANGRAM_API KeyEvent : public Event {
 	public:
 		inline int GetKeyCode() const { return m_KeyCode; }
 		EVENT_CLASS_CATEGORY( EventCategoryKeyboard | EventCategoryInput);
@@ -28,7 +28,7 @@ namespace Tangram {
 		EVENT_CLASS_TYPE(KeyPressed)
 	};
 
-	class TANGRAM_API KeyReleasedEvent :public KeyEvent {
+	class TANGRAM_API KeyReleasedEvent : public KeyEvent {
 	public:
 		KeyReleasedEvent(int keycode) :
 			KeyEvent(keycode) {};

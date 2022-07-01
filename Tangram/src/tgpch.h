@@ -11,7 +11,7 @@
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
-
+#include "Tangram/Log.h"
 
 #ifdef  TG_PLATFORM_WINDOWS
 	#include<Windows.h>

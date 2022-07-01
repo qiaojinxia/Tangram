@@ -7,8 +7,14 @@ workspace "Tangram"
 		"Release",
 		"Dist"
 	}
-	
+
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+IncludeDir = {}	
+IncludeDir["GLFW"] = "Tangram/vendor/GLFW/include"
+
+include "Tangram/vendor/GLFW"
+
 project "Tangram"
 	location "Tangram"
 	kind "SharedLib"
@@ -26,8 +32,13 @@ project "Tangram"
 	}
 	includedirs{
 		 "%{prj.name}/src",
-		 "Tangram/vendor/spdlog/include"
+		 "%{prj.name}/vendor/spdlog/include",
+		 "%{IncludeDir.GLFW}"
 	}
+	links{
+		"GLFW",
+		"opengl32.lib"
+	} 
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"   

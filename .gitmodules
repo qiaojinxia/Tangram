@@ -1,3 +1,6 @@
 [submodule "Tangram/vendor/spdlog"]
 	path = Tangram/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Tangram/vendor/GLFW"]
+	path = Tangram/vendor/GLFW
+	url = https://github.com/TheCherno/glfw
