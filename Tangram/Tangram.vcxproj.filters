@@ -40,6 +40,12 @@
     <ClInclude Include="src\Tangram\Events\MouseEvent.h">
       <Filter>Tangram\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Tangram\Layer.h">
+      <Filter>Tangram</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tangram\LayerStack.h">
+      <Filter>Tangram</Filter>
+    </ClInclude>
     <ClInclude Include="src\Tangram\Log.h">
       <Filter>Tangram</Filter>
     </ClInclude>
@@ -53,6 +59,12 @@
       <Filter>Plateform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Tangram\Application.cpp">
+      <Filter>Tangram</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tangram\Layer.cpp">
+      <Filter>Tangram</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tangram\LayerStack.cpp">
       <Filter>Tangram</Filter>
     </ClCompile>
     <ClCompile Include="src\Tangram\Log.cpp">

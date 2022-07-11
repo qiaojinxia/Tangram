@@ -96,12 +96,15 @@ project "Sandbox"
 	}
 	filter "configurations:Debug"
 		defines "TG_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "TG_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "TG_DIST"
+		buildoptions "/MD"
 		optimize "On"
