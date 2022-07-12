@@ -1,7 +1,7 @@
 #pragma once
 #include "Tangram/Window.h"
 #include <GLFW/glfw3.h>
-
+struct GLFWwindow ;
  namespace Tangram{
 	class TANGRAM_API WindowsWindow : public Window {
 	public:
