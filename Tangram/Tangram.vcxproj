@@ -80,7 +80,7 @@
       <PrecompiledHeaderFile>tgpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>TG_PLATFORM_WINDOWS;TG_BUILD_DLL;GLFW_INCLUDE_NONE;TG_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -103,7 +103,7 @@
       <PrecompiledHeaderFile>tgpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>TG_PLATFORM_WINDOWS;TG_BUILD_DLL;GLFW_INCLUDE_NONE;TG_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -130,7 +130,7 @@
       <PrecompiledHeaderFile>tgpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>TG_PLATFORM_WINDOWS;TG_BUILD_DLL;GLFW_INCLUDE_NONE;TG_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -152,27 +152,31 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Plateform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Tangram.h" />
     <ClInclude Include="src\Tangram\Application.h" />
     <ClInclude Include="src\Tangram\Core.h" />
     <ClInclude Include="src\Tangram\EntryPoint.h" />
     <ClInclude Include="src\Tangram\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Tangram\Events\Event.h" />
+    <ClInclude Include="src\Tangram\ImGui\ImgGuiLayer.h" />
     <ClInclude Include="src\Tangram\Events\KeyEvent.h" />
     <ClInclude Include="src\Tangram\Events\MouseEvent.h" />
     <ClInclude Include="src\Tangram\Layer.h" />
     <ClInclude Include="src\Tangram\LayerStack.h" />
     <ClInclude Include="src\Tangram\Log.h" />
+    <ClInclude Include="src\Tangram\Plateform\OpenGL\ImgGuiOpenRender.h" />
+    <ClInclude Include="src\Tangram\Plateform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Tangram\Window.h" />
     <ClInclude Include="src\tgpch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Plateform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Tangram\Application.cpp" />
+    <ClCompile Include="src\Tangram\ImGui\ImgGuiLayer.cpp" />
     <ClCompile Include="src\Tangram\Layer.cpp" />
     <ClCompile Include="src\Tangram\LayerStack.cpp" />
     <ClCompile Include="src\Tangram\Log.cpp" />
+    <ClCompile Include="src\Tangram\Plateform\OpenGL\ImgGuiOpenRender.cpp" />
+    <ClCompile Include="src\Tangram\Plateform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\tgpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
@@ -183,6 +187,9 @@
     </ProjectReference>
     <ProjectReference Include="vendor\Glad\Glad.vcxproj">
       <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vendor\imgui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -4,3 +4,6 @@
 [submodule "Tangram/vendor/GLFW"]
 	path = Tangram/vendor/GLFW
 	url = https://github.com/TheCherno/glfw
+[submodule "Tangram/vendor/imgui"]
+	path = Tangram/vendor/imgui
+	url = http://github.com/TheCherno/imgui

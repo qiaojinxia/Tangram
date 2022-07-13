@@ -4,6 +4,9 @@
     <Filter Include="Plateform">
       <UniqueIdentifier>{CF988A45-3B03-3FBC-8441-F061F0EA1C11}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Plateform\OpenGL">
+      <UniqueIdentifier>{23634768-0F5C-66BA-388E-4B3F24E645C6}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Plateform\Windows">
       <UniqueIdentifier>{09A24FC9-75B8-4D5F-BE2F-D9802A851EE7}</UniqueIdentifier>
     </Filter>
@@ -13,11 +16,11 @@
     <Filter Include="Tangram\Events">
       <UniqueIdentifier>{134BB394-FF18-A79A-E8AC-17C1D41983FF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tangram\Events\ImGui">
+      <UniqueIdentifier>{7D825A88-6911-E451-1230-F84CFE9DF4F7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Plateform\Windows\WindowsWindow.h">
-      <Filter>Plateform\Windows</Filter>
-    </ClInclude>
     <ClInclude Include="src\Tangram.h" />
     <ClInclude Include="src\Tangram\Application.h">
       <Filter>Tangram</Filter>
@@ -33,6 +36,9 @@
     </ClInclude>
     <ClInclude Include="src\Tangram\Events\Event.h">
       <Filter>Tangram\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tangram\ImGui\ImgGuiLayer.h">
+      <Filter>Tangram\Events\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="src\Tangram\Events\KeyEvent.h">
       <Filter>Tangram\Events</Filter>
@@ -53,13 +59,15 @@
       <Filter>Tangram</Filter>
     </ClInclude>
     <ClInclude Include="src\tgpch.h" />
+    <ClInclude Include="src\Tangram\Plateform\OpenGL\ImgGuiOpenRender.h" />
+    <ClInclude Include="src\Tangram\Plateform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Plateform\Windows\WindowsWindow.cpp">
-      <Filter>Plateform\Windows</Filter>
-    </ClCompile>
     <ClCompile Include="src\Tangram\Application.cpp">
       <Filter>Tangram</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tangram\ImGui\ImgGuiLayer.cpp">
+      <Filter>Tangram\Events\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Tangram\Layer.cpp">
       <Filter>Tangram</Filter>
@@ -71,5 +79,7 @@
       <Filter>Tangram</Filter>
     </ClCompile>
     <ClCompile Include="src\tgpch.cpp" />
+    <ClCompile Include="src\Tangram\Plateform\OpenGL\ImgGuiOpenRender.cpp" />
+    <ClCompile Include="src\Tangram\Plateform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
