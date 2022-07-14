@@ -23,7 +23,8 @@ project "Tangram"
 	location "Tangram"
 	kind "SharedLib"
 	language "C++"
-	
+	staticruntime "off"   
+
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
@@ -49,7 +50,6 @@ project "Tangram"
 	} 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"   
 		systemversion "latest"
 
 	defines
@@ -65,17 +65,17 @@ project "Tangram"
 	}
 	filter "configurations:Debug"
 		defines "TG_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "TG_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "TG_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 project "Sandbox"
@@ -101,7 +101,7 @@ project "Sandbox"
 	}
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"   
+		staticruntime "off"   
 		systemversion "latest"
 	defines
 	{
@@ -109,15 +109,15 @@ project "Sandbox"
 	}
 	filter "configurations:Debug"
 		defines "TG_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "TG_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "TG_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
