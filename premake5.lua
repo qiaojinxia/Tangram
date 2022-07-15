@@ -1,6 +1,6 @@
 workspace "Tangram"
 	architecture "x64"
-
+	startproject "Tangram"
 	configurations
 	{
 		"Debug",
@@ -15,10 +15,12 @@ IncludeDir["GLFW"] = "Tangram/vendor/GLFW/include"
 IncludeDir["Glad"] = "Tangram/vendor/Glad/include"
 IncludeDir["ImGui"] = "Tangram/vendor/imgui"
 
-include "Tangram/vendor/GLFW"
-include "Tangram/vendor/Glad"
-include "Tangram/vendor/imgui"
+group "Dependencies"
+	include "Tangram/vendor/GLFW"
+	include "Tangram/vendor/Glad"
+	include "Tangram/vendor/imgui"
 
+group ""
 project "Tangram"
 	location "Tangram"
 	kind "SharedLib"
@@ -61,7 +63,7 @@ project "Tangram"
 
 	postbuildcommands
 	{
-		("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+		("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 	}
 	filter "configurations:Debug"
 		defines "TG_DEBUG"
