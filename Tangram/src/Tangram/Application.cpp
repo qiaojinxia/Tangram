@@ -1,6 +1,6 @@
 #include "tgpch.h"
 #include "Application.h"
-
+#include "Input.h"
 
 namespace Tangram {
 
@@ -27,7 +27,8 @@ namespace Tangram {
 			layer->OnUpdate();
 		while (m_Running) {
 			m_Window->OnUpdate();
-
+			auto [x, y] = Input::GetMousePosition();
+			TG_CORE_TRACE("{0},{1}", x, y);
 		}
 
 	}

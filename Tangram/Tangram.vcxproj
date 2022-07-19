@@ -149,6 +149,9 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Plateform\OpenGL\ImgGuiOpenRender.h" />
+    <ClInclude Include="src\Plateform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Plateform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Tangram.h" />
     <ClInclude Include="src\Tangram\Application.h" />
     <ClInclude Include="src\Tangram\Core.h" />
@@ -158,22 +161,22 @@
     <ClInclude Include="src\Tangram\Events\KeyEvent.h" />
     <ClInclude Include="src\Tangram\Events\MouseEvent.h" />
     <ClInclude Include="src\Tangram\ImGui\ImgGuiLayer.h" />
+    <ClInclude Include="src\Tangram\Input.h" />
     <ClInclude Include="src\Tangram\Layer.h" />
     <ClInclude Include="src\Tangram\LayerStack.h" />
     <ClInclude Include="src\Tangram\Log.h" />
-    <ClInclude Include="src\Tangram\Plateform\OpenGL\ImgGuiOpenRender.h" />
-    <ClInclude Include="src\Tangram\Plateform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Tangram\Window.h" />
     <ClInclude Include="src\tgpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Plateform\OpenGL\ImgGuiOpenRender.cpp" />
+    <ClCompile Include="src\Plateform\Windows\WindowsInput.cpp" />
+    <ClCompile Include="src\Plateform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Tangram\Application.cpp" />
     <ClCompile Include="src\Tangram\ImGui\ImgGuiLayer.cpp" />
     <ClCompile Include="src\Tangram\Layer.cpp" />
     <ClCompile Include="src\Tangram\LayerStack.cpp" />
     <ClCompile Include="src\Tangram\Log.cpp" />
-    <ClCompile Include="src\Tangram\Plateform\OpenGL\ImgGuiOpenRender.cpp" />
-    <ClCompile Include="src\Tangram\Plateform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\tgpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

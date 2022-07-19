@@ -19,7 +19,7 @@ struct GLFWwindow ;
 	private:
 		virtual void Init (const WindowProps& props) ;
 		virtual void Shutdown();
-
+		inline virtual void* GetNativateWindow() const { return m_Window; };
 	private:
 		GLFWwindow* m_Window;
 		struct  WindowData
