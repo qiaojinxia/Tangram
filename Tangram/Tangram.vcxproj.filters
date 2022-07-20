@@ -69,6 +69,8 @@
     </ClInclude>
     <ClInclude Include="src\tgpch.h" />
     <ClInclude Include="src\Plateform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Tangram\keyCode.h" />
+    <ClInclude Include="src\Tangram\MouseButtonCode.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Plateform\OpenGL\ImgGuiOpenRender.cpp">

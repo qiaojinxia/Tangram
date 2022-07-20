@@ -23,12 +23,12 @@ namespace Tangram {
 	void Application::Run()
 	{
 
-		for (Layer* layer : m_LayerStack)
-			layer->OnUpdate();
 		while (m_Running) {
+			for (Layer* layer : m_LayerStack)
+				layer->OnUpdate();
 			m_Window->OnUpdate();
-			auto [x, y] = Input::GetMousePosition();
-			TG_CORE_TRACE("{0},{1}", x, y);
+			//auto [x, y] = Input::GetMousePosition();
+			//TG_CORE_TRACE("{0},{1}", x, y);
 		}
 
 	}

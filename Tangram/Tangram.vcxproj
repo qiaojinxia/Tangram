@@ -162,9 +162,11 @@
     <ClInclude Include="src\Tangram\Events\MouseEvent.h" />
     <ClInclude Include="src\Tangram\ImGui\ImgGuiLayer.h" />
     <ClInclude Include="src\Tangram\Input.h" />
+    <ClInclude Include="src\Tangram\keyCode.h" />
     <ClInclude Include="src\Tangram\Layer.h" />
     <ClInclude Include="src\Tangram\LayerStack.h" />
     <ClInclude Include="src\Tangram\Log.h" />
+    <ClInclude Include="src\Tangram\MouseButtonCode.h" />
     <ClInclude Include="src\Tangram\Window.h" />
     <ClInclude Include="src\tgpch.h" />
   </ItemGroup>

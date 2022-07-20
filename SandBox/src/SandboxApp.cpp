@@ -1,4 +1,5 @@
 #include <Tangram.h>
+#include <Tangram/Events/KeyEvent.h>
 
 class ExampleLayer :public Tangram::Layer
 {
@@ -7,11 +8,17 @@ public:
 
 
 	void OnEvent(Event& event) override {
-		TG_TRACE("{0}", event);
+		if (event.GetEventType() == EventType::KeyPressed) {
+			Tangram::KeyPressedEvent& e = (Tangram::KeyPressedEvent&)event;
+			TG_TRACE("{0}", e.GetKeyCode());
+		}
+
 	};
 
 	virtual void OnUpdate() override {
-		TG_INFO("ExampleLayer::Update");
+		if (Tangram::Input::IsKeyPressed(TG_KEY_TAB)) {
+			TG_TRACE("TAB PRESSED");
+		}	
 	};
 
 };
