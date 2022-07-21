@@ -9,16 +9,18 @@ workspace "Tangram"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
-
-IncludeDir = {}	
+	
+IncludeDir = {}
 IncludeDir["GLFW"] = "Tangram/vendor/GLFW/include"
 IncludeDir["Glad"] = "Tangram/vendor/Glad/include"
+IncludeDir["glm"] = "Tangram/vendor/glm"
 IncludeDir["ImGui"] = "Tangram/vendor/imgui"
 
 group "Dependencies"
 	include "Tangram/vendor/GLFW"
 	include "Tangram/vendor/Glad"
 	include "Tangram/vendor/imgui"
+
 
 group ""
 project "Tangram"
@@ -36,12 +38,15 @@ project "Tangram"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 	includedirs{
 		 "%{prj.name}/src",
 		 "%{prj.name}/vendor/spdlog/include",
 		 "%{IncludeDir.GLFW}",
 		 "%{IncludeDir.Glad}",
+		 "%{IncludeDir.glm}",
 		 "%{IncludeDir.ImGui}"
 	}
 	links{
@@ -94,8 +99,8 @@ project "Sandbox"
 	}
 	includedirs{
 		 "Tangram/vendor/spdlog/include",
-		 "Tangram/src"
-
+		 "Tangram/src",
+		 "%{IncludeDir.glm}"
 	}
 	links
 	{

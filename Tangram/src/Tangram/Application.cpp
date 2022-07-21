@@ -1,7 +1,6 @@
 #include "tgpch.h"
 #include "Application.h"
 #include "Input.h"
-
 namespace Tangram {
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x,this,std::placeholders::_1)

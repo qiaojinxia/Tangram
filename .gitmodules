@@ -7,3 +7,6 @@
 [submodule "Tangram/vendor/imgui"]
 	path = Tangram/vendor/imgui
 	url = http://github.com/TheCherno/imgui
+[submodule ".\\Tangram\\vendor\\glm"]
+	path = .\\Tangram\\vendor\\glm
+	url = https://github.com/g-truc/glm
