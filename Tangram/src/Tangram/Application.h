@@ -5,6 +5,7 @@
 #include "Events/ApplicationEvent.h"
 #include "Tangram/LayerStack.h"
 
+#define BIND_EVENT_FN(x) std::bind(&x,this,std::placeholders::_1)
 namespace Tangram {
 	class TANGRAM_API Application
 	{

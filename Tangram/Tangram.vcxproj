@@ -591,6 +591,7 @@
     <ClCompile Include="src\Plateform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Tangram\Application.cpp" />
     <ClCompile Include="src\Tangram\ImGui\ImgGuiLayer.cpp" />
+    <ClCompile Include="src\Tangram\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Tangram\Layer.cpp" />
     <ClCompile Include="src\Tangram\LayerStack.cpp" />
     <ClCompile Include="src\Tangram\Log.cpp" />
@@ -608,6 +609,9 @@
     <ProjectReference Include="vendor\imgui\ImGui.vcxproj">
       <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

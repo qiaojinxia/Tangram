@@ -1379,5 +1379,9 @@
     <ClCompile Include="src\tgpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Tangram\ImGui\ImGuiBuild.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
