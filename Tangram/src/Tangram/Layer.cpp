@@ -2,20 +2,11 @@
 #include "Layer.h"
 
 namespace Tangram {
-	Layer::Layer(const std::string& debugName):m_DebugName(debugName){
+	Layer::Layer(const std::string& name)
+	{
 	}
-
 	Layer::~Layer()
 	{
-
-	}
-	void Layer::OnAttach()
-	{
-
-	}
-	void Layer::OnDetach()
-	{
-
 	}
 }
 

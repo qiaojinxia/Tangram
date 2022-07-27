@@ -35,7 +35,7 @@ class Sandbox :public Tangram::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Tangram::ImGuiLayer());
+
 	}
 	~Sandbox() {
 

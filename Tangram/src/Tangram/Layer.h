@@ -7,8 +7,9 @@ namespace Tangram {
 	public:
 		Layer(const std::string& name = "Layer");
 		virtual ~Layer();
-		virtual void OnAttach();
-		virtual void OnDetach();
+		virtual void OnAttach() {};
+		virtual void OnDetach() {};
+		virtual void OnImGuiRender() {};
 		virtual void OnUpdate() {};
 		virtual void OnEvent(Event& event) {};
 

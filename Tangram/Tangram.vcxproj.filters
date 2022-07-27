@@ -45,9 +45,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Plateform\OpenGL\ImgGuiOpenRender.h">
-      <Filter>src\Plateform\OpenGL</Filter>
-    </ClInclude>
     <ClInclude Include="src\Plateform\Windows\WindowsInput.h">
       <Filter>src\Plateform\Windows</Filter>
     </ClInclude>
@@ -1352,9 +1349,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Plateform\OpenGL\ImgGuiOpenRender.cpp">
-      <Filter>src\Plateform\OpenGL</Filter>
-    </ClCompile>
     <ClCompile Include="src\Plateform\Windows\WindowsInput.cpp">
       <Filter>src\Plateform\Windows</Filter>
     </ClCompile>

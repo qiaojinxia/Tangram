@@ -4,7 +4,9 @@
 #include "Window.h"
 #include "Events/ApplicationEvent.h"
 #include "Tangram/LayerStack.h"
+#include "Tangram/ImGui/ImgGuiLayer.h"
 
+class ImGuiLayer;
 #define BIND_EVENT_FN(x) std::bind(&x,this,std::placeholders::_1)
 namespace Tangram {
 	class TANGRAM_API Application
@@ -25,6 +27,7 @@ namespace Tangram {
 		bool OnWindowClose(WindowCloseEvent& e);
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
+		ImGuiLayer* m_ImGuiLayer;
 		LayerStack m_LayerStack;
 	private:
 		static Application* s_Instance;
