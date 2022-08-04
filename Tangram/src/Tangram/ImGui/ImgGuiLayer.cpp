@@ -1,10 +1,14 @@
 #include "tgpch.h"
 #include "ImgGuiLayer.h"
+
+
+#include <imgui.h>
+#include "examples/imgui_impl_opengl3.h"
+#include "examples/imgui_impl_glfw.h"
+#include "Tangram/Application.h"
+
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
-#include <imgui.h>
-#include <backends/imgui_impl_opengl3.h>
-#include <backends/imgui_impl_glfw.h>
 
 namespace Tangram {
 	ImGuiLayer::ImGuiLayer():Layer("ImGuiLayer")
@@ -72,7 +76,7 @@ namespace Tangram {
 	{
 		ImGuiIO& io = ImGui::GetIO();
 		Application& app = Application::Get();
-		io.DisplaySize = ImVec2(app.GetWindow().GetWeight(), app.GetWindow().GetHeight());
+		io.DisplaySize = ImVec2((float)app.GetWindow().GetWeight(), (float)app.GetWindow().GetHeight());
 
 		ImGui::Render();
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
@@ -89,6 +93,4 @@ namespace Tangram {
 		}
 			
 	}
-
-	
-	}
+}

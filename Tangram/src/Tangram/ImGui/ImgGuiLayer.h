@@ -3,7 +3,8 @@
 #include "Tangram/Layer.h"
 #include "Tangram/Events/MouseEvent.h"
 #include "Tangram/Events/KeyEvent.h"
-#include "Tangram/Application.h"
+#include "Tangram/Events/ApplicationEvent.h"
+
 namespace Tangram {
 	class TANGRAM_API ImGuiLayer:public Layer {
 	public:

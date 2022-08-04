@@ -1,5 +1,6 @@
 #pragma once
 #include "tgpch.h"
+
 #include "Tangram/Core.h"
 #include "Tangram/Events/Event.h"
 namespace Tangram {

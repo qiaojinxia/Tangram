@@ -1,5 +1,6 @@
 #include "tgpch.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
+#include "Log.h"
 namespace Tangram {
 	std::shared_ptr<spdlog::logger> Log::s_CoreLogger;
 	std::shared_ptr<spdlog::logger> Log::s_ClientLogger;

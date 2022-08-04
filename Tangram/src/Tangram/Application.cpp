@@ -1,7 +1,12 @@
 #include "tgpch.h"
 #include "Application.h"
+
 #include "Input.h"
 #include <glad/glad.h>
+
+
+#include "Tangram/Log.h"
+
 namespace Tangram {
 
 	Application* Application::s_Instance = nullptr;

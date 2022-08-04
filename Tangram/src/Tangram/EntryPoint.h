@@ -1,5 +1,5 @@
 #pragma once
-#include <Tangram.h>
+
 
 #ifdef TG_PLATFORM_WINDOWS
 

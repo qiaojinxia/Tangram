@@ -1,6 +1,6 @@
 workspace "Tangram"
 	architecture "x64"
-	startproject "Tangram"
+	startproject "Sandbox"
 	configurations
 	{
 		"Debug",
@@ -25,21 +25,28 @@ group "Dependencies"
 group ""
 project "Tangram"
 	location "Tangram"
-	kind "SharedLib"
+	kind "StaticLib"
 	language "C++"
-	staticruntime "off"   
+	cppdialect "C++17"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	pchheader "tgpch.h"
 	pchsource "Tangram/src/tgpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
 		"%{prj.name}/vendor/glm/glm/**.inl"
+	}
+
+	defines
+	{
+		"_CRT_SECURE_NO_WARNINGS"
 	}
 	includedirs{
 		 "%{prj.name}/src",
@@ -56,75 +63,77 @@ project "Tangram"
 		"opengl32.lib"
 	} 
 	filter "system:windows"
-		cppdialect "C++17"
 		systemversion "latest"
 
-	defines
-	{
-		"TG_PLATFORM_WINDOWS",
-		"TG_BUILD_DLL",
-		"GLFW_INCLUDE_NONE"
-	}
+		defines
+		{
+			"TG_PLATFORM_WINDOWS",
+			"TG_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
+		}
 
-	postbuildcommands
-	{
-		("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
-	}
 	filter "configurations:Debug"
 		defines "TG_DEBUG"
 		runtime "Debug"
-		symbols "On"
+		symbols "on"
 
 	filter "configurations:Release"
 		defines "TG_RELEASE"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
 
 	filter "configurations:Dist"
 		defines "TG_DIST"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
+
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
-	
+	cppdialect "C++17"
+	staticruntime "on"
+
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/src/**.cpp"
 	}
-	includedirs{
-		 "Tangram/vendor/spdlog/include",
-		 "Tangram/src",
-		 "%{IncludeDir.glm}"
+	
+	includedirs
+	{
+		"Tangram/vendor/spdlog/include",
+		"Tangram/src",
+		"Tangram/vendor",
+		"%{IncludeDir.glm}"
 	}
+
 	links
 	{
 		"Tangram"
 	}
 	filter "system:windows"
-		cppdialect "C++17"
-		staticruntime "off"   
 		systemversion "latest"
-	defines
-	{
-		"TG_PLATFORM_WINDOWS"
-	}
+		defines
+		{
+			"TG_PLATFORM_WINDOWS"
+
+		}
 	filter "configurations:Debug"
 		defines "TG_DEBUG"
 		runtime "Debug"
-		symbols "On"
+		symbols "on"
 
 	filter "configurations:Release"
 		defines "TG_RELEASE"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
 
 	filter "configurations:Dist"
 		defines "TG_DIST"
 		runtime "Release"
-		optimize "On"
+		optimize "on"

@@ -1,6 +1,8 @@
 #pragma once
 #include "Tangram/Window.h"
 #include <GLFW/glfw3.h>
+#include "Tangram/Renderer/GraphicsContext.h"
+
 struct GLFWwindow ;
  namespace Tangram{
 	class TANGRAM_API WindowsWindow : public Window {
@@ -22,12 +24,12 @@ struct GLFWwindow ;
 		inline virtual void* GetNativateWindow() const { return m_Window; };
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 		struct  WindowData
 		{
 			std::string Title;
-			unsigned int Width, Height;
+			unsigned int Width{0}, Height{0};
 			bool Vsync;
-
 			EventCallbackFn EventCallback;
 		};
 

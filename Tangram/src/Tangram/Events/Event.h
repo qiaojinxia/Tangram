@@ -1,5 +1,6 @@
 #pragma once
 #include "tgpch.h"
+
 enum class EventType
 {
 	None = 0,

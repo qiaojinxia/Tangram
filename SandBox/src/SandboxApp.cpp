@@ -1,15 +1,8 @@
 #include <Tangram.h>
-#include <Tangram/Events/KeyEvent.h>
-#include "glm/glm.hpp"
-
-#include <glm/vec3.hpp> // glm::vec3
-#include <glm/vec4.hpp> // glm::vec4
-#include <glm/mat4x4.hpp> // glm::mat4
-#include <glm/ext/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale
-#include <glm/ext/matrix_clip_space.hpp> // glm::perspective
-#include <glm/ext/scalar_constants.hpp> // glm::pi
+#include "imgui/imgui.h"
 
 
+//------------------------------
 class ExampleLayer :public Tangram::Layer
 {
 public:
@@ -21,14 +14,19 @@ public:
 			Tangram::KeyPressedEvent& e = (Tangram::KeyPressedEvent&)event;
 			TG_TRACE("{0}", e.GetKeyCode());
 		}
-	};
+	}; 
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World");
+		ImGui::End();
+	}
 
 	virtual void OnUpdate() override {
 		if (Tangram::Input::IsKeyPressed(TG_KEY_TAB)) {
 			TG_TRACE("TAB PRESSED");
 		}	
 	};
-
 };
 
 class Sandbox :public Tangram::Application {
@@ -37,7 +35,8 @@ public:
 		PushLayer(new ExampleLayer());
 
 	}
-	~Sandbox() {
+	~Sandbox() 
+	{
 
 	}
 };

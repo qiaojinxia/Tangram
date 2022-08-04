@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef TG_PLATFORM_WINDOWS
+#ifdef TG_DYNAMIC_LINK
 	#ifdef TG_BUILD_DLL
 		#define TANGRAM_API __declspec(dllexport)
 	#else
 		#define TANGRAM_API __declspec(dllimport)
 	#endif
+#else 
+	#define TANGRAM_API	
+#endif // TG_DYNAMIC_LINK
 #else
 	#error Hazel only support windows!
 #endif // DEBUG
@@ -19,3 +23,5 @@
 #endif //  TG_ENABLEF_ASSERTS
 
 #define BIT(x) (1 << x)
+
+#define BIND_EVENT_FN(x) std::bind(&x,this,std::placeholders::_1)
